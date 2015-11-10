@@ -1,0 +1,27 @@
+﻿<html>
+<head>
+   <title>更新</title>
+</head>
+<body><center>
+   <p>更新</p>
+   <form method="GET" aciton="">
+      {% for id,title,authorid,publisher,date,price in books%}
+      <table border=1>
+      <tr>
+      <td>Title</td><td>Author's Name</td><td>Publisher</td><td>Publish Date</td><td>Price</td>
+      </tr>
+      <tr>
+      <td>{{title}}</td>
+      <td><input type="text" name="tauthor_name" value={{author}}></td>
+      <td><input type="text" name="tpublisher" value={{publisher}}></td>
+      <td><input type="text" name="tdate" value={{datetime}}></td>
+      <td><input type="text" name="tprice" value={{price}}></td>
+      <td><input type="hidden" name="uid" value={{id}}></td>
+      <td><a href="/manage/?uid={{id}}"><input type="submit" name="update" value="更新"></a></td>
+      </tr>
+      </table>
+      {% endfor %}
+   </form>
+   <p><a href="/manage/">返回</a></p>
+</center></body>
+</html>

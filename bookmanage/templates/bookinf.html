@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+<title>图书信息</title>
+</head>
+<body><center> 
+   <p><a href="/home/">返回首页</a></p>
+   {%for id,title,authorid,publisher,date,price in books%}
+   <table border='1'>
+   <tr>
+      <td>ISBN</td><td>Title</td><td>Publisher</td><td>PublishDate</td><td>Price</td>
+   </tr>
+   <tr>
+      <td>{{id}}<td>{{title}}</td><td>{{publisher}}</td><td>{{date}}</td><td>{{price}}</td>
+   </tr>
+   {% empty %}
+      <p>No exit!</p>
+   {% endfor %}
+   
+   {%for auid,auname,auage,aucountry in author%}
+   <table border='1'>
+   <tr>
+      <td>Author</td><td>Age</td><td>Contry</td>
+   </tr>
+   <tr>
+      <td>{{auname}}</td><td>{{auage}}</td><td>{{aucountry}}</td>
+   </tr>
+   {% endfor %}
+
+   
+</center></body>
+</html>

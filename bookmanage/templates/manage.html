@@ -1,0 +1,25 @@
+﻿<html>
+<head>
+<title>图书管理</title>
+</head>
+<body><center>
+   
+   {% if books %}
+   <table border='1'>
+   <tr>
+      <td>Title</td>
+   </tr>
+   {%for id,title in books%}
+   <tr>
+      <td><a href="/bookinf/?id={{id}}">{{title}}</a></td>
+      <td><a href="/delete/?deid={{id}}">删除</a></td>
+      <td><a href="/update/?uid={{id}}">更新</a></td>
+   </tr>
+   {% endfor %}
+   {% else %}
+      <p>No exit!</p>
+   {% endif %}
+   <p><a href="/home/">返回首页</a></p>
+   <p><a href="/add_book/">添加书目</a></p>
+</center></body>
+</html>
