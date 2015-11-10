@@ -6,7 +6,7 @@ import random
 #@csrf_exempt
 # Create your views here.
 def homepage(request):
-    return render_to_response('home.html')
+    return render_to_response('error.html')
     
 def Error(request):
     return render_to_response('error.html')

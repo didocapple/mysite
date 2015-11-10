@@ -16,6 +16,6 @@ urlpatterns = patterns('',
     url(r'^update/','bookmanage.views.Update'),
     url(r'^add_book/','bookmanage.views.Add'),
     url(r'^add_author/','bookmanage.views.Add_author'),
-    url(r'^error/','bookmanage.views.Error'),
+    url(r'^error/','bookmanage.views.Search'),
     url(r'^manage/','bookmanage.views.Manage')
 )

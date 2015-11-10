@@ -75,7 +75,7 @@ DATABASES = {
         'USER': MYSQL_USER,
         'PASSWORD': MYSQL_PASS,
         'HOST': MYSQL_HOST_M,
-        'PORT': MYSQL_PORT,
+        'PORT': '3306',
     }
 }
 
